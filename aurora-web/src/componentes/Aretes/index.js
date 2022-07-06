@@ -1,10 +1,10 @@
 import React, {useContext} from "react";
-import {DataContext} from "../../context/Dataprovider";
-import {ProductoItem} from "./ProductoItem";
+import {DataContextAretes} from "../../context/DataAretesProv";
+import {ProductoItemAr} from "./ProductoItem";
 
 export const Aretes = () => {
 
-  const value = useContext(DataContext)
+  const value = useContext(DataContextAretes)
   const [productos] = value.productos
   console.log(productos)
 
@@ -13,7 +13,7 @@ export const Aretes = () => {
     <h1 className="title">PRODUCTOS</h1>
     <div className="productos">
       {productos.map((producto) =>(
-          <ProductoItem 
+          <ProductoItemAr
           key={producto.id} 
           id={producto.id}
           title={producto.title}

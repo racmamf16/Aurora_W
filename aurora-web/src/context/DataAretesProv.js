@@ -1,16 +1,16 @@
 import React, {useState, useEffect, createContext} from "react";
-import Data from "../Data.js";
+import dataAretes from "../DataAretes.js";
 
-export const DataContext = createContext();
+export const DataContextAretes = createContext();
 
-export const DataProvider = (props) =>{
+export const DataProviderAretes = (props) =>{
 const [productos, setProductos] = useState([])
 const [menu, setMenu] = useState(false);
 const [carrito,setCarrito] = useState([]);
 const [total, setTotal] = useState(0);
 
 useEffect(() =>{
-const producto = Data.items
+const producto = dataAretes.items
 if(producto){
     setProductos(producto)
 }
@@ -64,8 +64,8 @@ const value ={
 }
 
 return (
-    <DataContext.Provider value = {value} >
+    <DataContextAretes.ProviderAretes value = {value} >
         {props.children}
-    </DataContext.Provider>
+    </DataContextAretes.ProviderAretes>
 )
 }
