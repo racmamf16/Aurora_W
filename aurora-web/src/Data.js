@@ -1,4 +1,4 @@
-const data = {
+const Data = {
     status: "success",
     items: [
       
@@ -116,6 +116,6 @@ const data = {
       },
     ],
   };
-  export default data;
+  export default Data;
 
   

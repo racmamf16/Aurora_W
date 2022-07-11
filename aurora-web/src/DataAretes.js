@@ -1,4 +1,4 @@
-const dataAretes ={
+const DataAretes ={
     status: "success",
     items: [
         {
@@ -99,4 +99,4 @@ const dataAretes ={
           }
     ],
 };
-export default dataAretes;
+export default DataAretes;

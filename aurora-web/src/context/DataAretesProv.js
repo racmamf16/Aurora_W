@@ -1,8 +1,7 @@
 import React, {useState, useEffect, createContext} from "react";
-import dataAretes from "../DataAretes.js";
+import DataAretes from "../DataAretes.js";
 
 export const DataContextAretes = createContext();
-
 export const DataProviderAretes = (props) =>{
 const [productos, setProductos] = useState([])
 const [menu, setMenu] = useState(false);
@@ -10,7 +9,7 @@ const [carrito,setCarrito] = useState([]);
 const [total, setTotal] = useState(0);
 
 useEffect(() =>{
-const producto = dataAretes.items
+const producto = DataAretes.items
 if(producto){
     setProductos(producto)
 }
@@ -25,10 +24,10 @@ const addCarrito =(id) =>{
         return item.id !== id;
     })
     if(check){
-       const data = productos. filter(producto =>{
+       const dataAretes = productos. filter(producto =>{
            return producto.id === id
        })
-       setCarrito([...carrito, ...data])
+       setCarrito([...carrito, ...dataAretes])
     }
     else{
         alert("El producto se ha añadido al carrito")
@@ -64,8 +63,8 @@ const value ={
 }
 
 return (
-    <DataContextAretes.ProviderAretes value = {value} >
+    <DataContextAretes.Provider value = {value} >
         {props.children}
-    </DataContextAretes.ProviderAretes>
+    </DataContextAretes.Provider>
 )
 }
